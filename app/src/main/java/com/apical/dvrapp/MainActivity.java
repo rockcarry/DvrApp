@@ -10,13 +10,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
 import android.widget.RadioGroup;
-import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "===ck===";
-    private RadioGroup mGroupBottomBtns;
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -33,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
      */
     private ViewPager mViewPager;
 
+    private RadioGroup mGroupBottomBtns;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +44,24 @@ public class MainActivity extends AppCompatActivity {
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
+        mViewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {}
+
+            @Override
+            public void onPageSelected(int position) {
+                int id = -1;
+                switch (position) {
+                    case 0: id = R.id.btn_preview ; break;
+                    case 1: id = R.id.btn_gallery ; break;
+                    case 2: id = R.id.btn_settings; break;
+                }
+                mGroupBottomBtns.check(id);
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {}
+        });
 
         mGroupBottomBtns = findViewById(R.id.bottom_btn_list );
         mGroupBottomBtns.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -96,8 +113,6 @@ public class MainActivity extends AppCompatActivity {
             case 2: rootView = inflater.inflate(R.layout.fragment_2, container, false); break;
             case 3: rootView = inflater.inflate(R.layout.fragment_3, container, false); break;
             }
-            TextView textView = (TextView) rootView.findViewById(R.id.section_label);
-            textView.setText(getString(R.string.section_format, getArguments().getInt(ARG_SECTION_NUMBER)));
             return rootView;
         }
     }

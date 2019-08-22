@@ -1,0 +1,8 @@
+<resources>
+    <string name="btn_preview">预览</string>
+    <string name="btn_gallery">相册</string>
+    <string name="btn_settings">设置</string>
+    <string name="txt_camera">摄像机</string>
+    <string name="txt_gallery">本地</string>
+    <string name="txt_settings">设置</string>
+</resources>
