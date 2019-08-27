@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="@color/colorLightGray"
     tools:context=".MainActivity$PlaceholderFragment">
 
     <TextView
+        android:id="@+id/txt_preview_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#22222A"
@@ -17,10 +17,44 @@
         android:textColor="@color/colorWhite"
         android:textSize="23dp"
         android:gravity="center"
-        android:text="@string/txt_camera"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/constraintLayout"
-        tools:layout_constraintLeft_creator="1"
-        tools:layout_constraintTop_creator="1"/>
+        android:text="@string/txt_camera"/>
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" >
+            <SurfaceView
+                android:id="@+id/video_view"
+                android:background="@color/colorBlack"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                 />
+            <TextView
+                android:id="@+id/txt_camera_status"
+                android:background="@color/colorBlack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/colorLightGray"
+                android:text="@string/txt_camera_status"/>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center" >
+            <Button
+                android:id="@+id/btn_snapshot"
+                android:background="@drawable/btn_take_photo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -5,4 +5,27 @@
     <string name="txt_camera">摄像机</string>
     <string name="txt_gallery">本地</string>
     <string name="txt_settings">设置</string>
+    <string name="txt_camera_status">请连接摄像机.\n(摄像机 WiFi 默认名称: \"DSH-922\", 默认密码: \"12345678\")</string>
+    <string name="txt_audiorec_onoff">录音开关</string>
+    <string name="txt_edog_onoff">电子狗开关</string>
+    <string name="txt_rec_segment">录像时长</string>
+    <string name="txt_rec_volume">音量设置</string>
+    <string name="txt_collision_sensitivity">碰撞灵敏度</string>
+    <string name="txt_calibrate_time">校准时间</string>
+    <string name="txt_format_sd">格式化 SD 卡</string>
+    <string name="txt_wifi_settings">WiFi 设置</string>
+    <string name="txt_factory_reset">恢复出厂设置</string>
+    <string name="txt_help">帮助</string>
+    <string name="txt_about">关于 DVR</string>
+    <string name="btn_1min">1 分钟</string>
+    <string name="btn_3min">3 分钟</string>
+    <string name="btn_5min">5 分钟</string>
+    <string name="btn_vol_off">关</string>
+    <string name="btn_vol_low">低</string>
+    <string name="btn_vol_mid">中</string>
+    <string name="btn_vol_high">高</string>
+    <string name="btn_sensitivity_off">关</string>
+    <string name="btn_sensitivity_low">低</string>
+    <string name="btn_sensitivity_mid">中</string>
+    <string name="btn_sensitivity_high">高</string>
 </resources>

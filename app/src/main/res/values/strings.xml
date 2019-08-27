@@ -7,4 +7,27 @@
     <string name="txt_camera">Camera</string>
     <string name="txt_gallery">Local</string>
     <string name="txt_settings">Settings</string>
+    <string name="txt_camera_status">Please connect camera.\n(Camera WiFi name is: \"DSH-922\", password is: \"12345678\")</string>
+    <string name="txt_audiorec_onoff">audio record on/off</string>
+    <string name="txt_edog_onoff">edog on/off</string>
+    <string name="txt_rec_segment">recording segment</string>
+    <string name="txt_rec_volume">volume setting</string>
+    <string name="txt_collision_sensitivity">collision sensitivity</string>
+    <string name="txt_calibrate_time">calibrate time</string>
+    <string name="txt_format_sd">format sd</string>
+    <string name="txt_wifi_settings">WiFi settings</string>
+    <string name="txt_factory_reset">factory reset</string>
+    <string name="txt_help">help</string>
+    <string name="txt_about">about dvr</string>
+    <string name="btn_1min">1min</string>
+    <string name="btn_3min">3mins</string>
+    <string name="btn_5min">5mins</string>
+    <string name="btn_vol_off">off</string>
+    <string name="btn_vol_low">low</string>
+    <string name="btn_vol_mid">middle</string>
+    <string name="btn_vol_high">high</string>
+    <string name="btn_sensitivity_off">off</string>
+    <string name="btn_sensitivity_low">low</string>
+    <string name="btn_sensitivity_mid">middle</string>
+    <string name="btn_sensitivity_high">high</string>
 </resources>
